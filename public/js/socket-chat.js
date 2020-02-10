@@ -31,8 +31,10 @@ socket.emit('enviarMensaje', {
 });
 
 // Escuchar información
-socket.on('enviarMensaje', function (mensaje) {
-
-    console.log('Servidor:', mensaje);
-
+socket.on('createMessage', function (message) {
+    console.log('Servidor:', message);
 });
+socket.on('personsList', function (users) {
+    console.log('Servidor:', users);
+});
+socket
